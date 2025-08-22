@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee Haven</title>
+  <style>
+    /* CSS */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #fdf6f0;
+      color: #333;
+    }
+
+    header {
+      background: #4e342e;
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    header h1 { font-size: 1.5rem; }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 15px;
+      transition: 0.3s;
+    }
+    nav a:hover { color: #ffcc80; }
+
+    .hero {
+      height: 90vh;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                  url("coffee.jpg.jpg") center/cover no-repeat;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 2rem;
+    }
+    .hero h2 { font-size: 3rem; margin-bottom: 1rem; }
+    .hero p { font-size: 1.2rem; margin-bottom: 2rem; }
+
+    .btn {
+      background: #ff9800;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: 0.3s;
+      border-radius: 5px;
+    }
+    .btn:hover { background: #e68900; }
+
+    section {
+      padding: 3rem 2rem;
+      text-align: center;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .card {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .card:hover { transform: translateY(-5px); }
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+    .card h3 { margin-bottom: 0.5rem; }
+    .card span { display: block; margin-top: 0.5rem; font-weight: bold; }
+
+    footer {
+      background: #4e342e;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Kenro's Coffee shop</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#menu">Menu</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h2>Welcome to Kenros' Coffee Shop</h2>
+    <p>Your daily dose of freshly brewed happiness ☕</p>
+    <button class="btn" onclick="scrollToSection('menu')">See Our Menu</button>
+  </section>
+
+  <!-- Menu -->
+  <section id="menu">
+    <h2>Our Coffee Menu</h2>
+    <div class="menu-grid">
+      <div class="card">
+        <img src="espresso.jpg" alt="Espresso">
+        <h3>Espresso</h3>
+        <p>Rich and bold shot of coffee.</p>
+        <span>$3.00</span>
+      </div>
+      <div class="card">
+        <img src="latte.jpg" alt="Latte">
+        <h3>Latte</h3>
+        <p>Creamy milk with smooth espresso.</p>
+        <span>$4.50</span>
+      </div>
+      <div class="card">
+        <img src="capuccino.jpg" alt="Cappuccino">
+        <h3>Cappuccino</h3>
+        <p>Perfect balance of espresso and foam.</p>
+        <span>$4.00</span>
+      </div>
+      <div class="card">
+        <img src="express.jpg" alt="Mocha">
+        <h3>Mocha</h3>
+        <p>Espresso blended with chocolate.</p>
+        <span>$5.00</span>
+      </div>
+      <div class="card">
+        <img src="cream.jpg.jpg" alt="Latte">
+        <h3>Latte</h3>
+        <p>Creamy milk with avocado.</p>
+        <span>$4.50</span>
+      </div>
+      <div class="card">
+        <img src="caramel.jpg" alt="Cappuccino">
+        <h3>Caramel</h3>
+        <p>Perfect for your daily habit.</p>
+        <span>$4.00</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>
+      At Coffee Haven, we believe every cup tells a story.  
+      From freshly roasted beans to cozy vibes, we bring warmth to your day.  
+      Drop by and sip happiness with us!
+    </p>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p><strong>Address:</strong> Estrada Sanroque Zamboanga City</p>
+    <p><strong>Email:</strong> robertcasipe2@gmail.com</p>
+    <p><strong>Phone:</strong> 09942004014</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Coffee Haven | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    // JS
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+</body>
+</html>
